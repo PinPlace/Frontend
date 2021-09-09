@@ -224,7 +224,11 @@ const Map = () => {
                                             <h1 className="text-lg" style={{ color: selected.colour }}>
                                                 {selected.name}
                                             </h1>
-                                            <button className=" rounded-xl mx-auto my-2 w-auto px-3 py-0.5 text-white" style={{ backgroundColor: selected.colour }}>{selected.tag}</button>
+
+
+                                            {selected.tags.map(x => <button className=" rounded-xl mx-auto my-2 w-auto px-3 py-0.5 text-white mr-2" style={{ backgroundColor: selected.colour }}>{x}</button>)}
+
+
                                             <div className="border rounded-md p-1 px-2 text-left w-full flex flex-row" style={{
                                                 borderColor: selected.colour,
                                                 color: selected.colour
