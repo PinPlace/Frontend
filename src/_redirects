@@ -1,3 +1,2 @@
 /api/* http://13.59.11.193:8000/api/pins/ 200!
-https://pinplace.netlify.app/map/api/* http://13.59.11.193:8000/api/pins/ 200!
-https://pinplace.netlify.app/map/api/* http://13.59.11.193:8000/api/pins/ 200!
+https://pinplace.netlify.app/api/* http://13.59.11.193:8000/api/pins/ 200!
