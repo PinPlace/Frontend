@@ -23,8 +23,9 @@ const Modal = (props) => {
             "name": e.target.name.value,
             "lat": e.target.Latitude.value,
             "lng": e.target.Longitude.value,
+            "address": e.target.Address.value,
             "notes": e.target.Notes.value,
-            "tag": e.target.tag.value,
+            "tag": [e.target.tag.value],
             "colour": e.target.colour.value,
             "user_id": 1
         };
@@ -87,6 +88,12 @@ const Modal = (props) => {
                                         <label htmlFor="Longitude" className="text-sm font-medium  tracking-wide">Longitude: </label>
                                         <input className=" shadow-sm border rounded-md w-full py-2 px-3  mt-1 leading-tight  outline-none focus:outline-none focus-within:border-purple-400 transition-all duration-500 text-base rounded-lg" placeholder="Longitude" name="Longitude" type="number" step="any" defaultValue={props.lng}></input>
                                     </div>
+                                </div>
+
+
+                                <div className="space-y-2">
+                                    <label htmlFor="Address" className="text-sm font-medium  tracking-wide">Address: </label>
+                                    <input className=" shadow-sm border rounded-md w-full py-2 px-3  mt-1 leading-tight  outline-none focus:outline-none focus-within:border-purple-400 transition-all duration-500 text-base rounded-lg" placeholder="Address" name="Address" type="text"></input>
                                 </div>
 
                                 <div className="space-y-2">
