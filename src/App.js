@@ -29,7 +29,7 @@ function App() {
         <Route exact path='/lists'> <ListIndex /> </Route>
         <Route path='/lists/:id'> <List /> </Route>
         <Route path="/map" ><Map /></Route>
-        <Route path="/share" ><Share /></Route>
+        {/* <Route path="/share" ><Share /></Route> */}
         <Route path="/profile" ><Profile /></Route>
         <Route path="/404" ><Error404 /></Route>
       </Switch>

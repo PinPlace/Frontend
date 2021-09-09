@@ -51,11 +51,11 @@ const Header = () => {
                     size={1.1}
                     className="inline mb-1 mdiIcon"
                 /></NavLink>
-                <NavLink to="/share" activeClassName="current" ><Icon path={mdiShareVariant}
+                {/* <NavLink to="/share" activeClassName="current" ><Icon path={mdiShareVariant}
                     title="Share"
                     size={1.1}
                     className="inline mb-1 mdiIcon"
-                /></NavLink>
+                /></NavLink> */}
                 <NavLink to="/profile" activeClassName="current"><Icon path={mdiAccountOutline}
                     title="Profile"
                     size={1.1}
