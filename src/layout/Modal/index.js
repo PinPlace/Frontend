@@ -37,7 +37,7 @@ const Modal = (props) => {
             }
         };
 
-        fetch('api/*', options)
+        fetch('/api/*', options)
             .then(r => r.json())
             .then(() => e.target.reset())
             .catch(console.warn)
