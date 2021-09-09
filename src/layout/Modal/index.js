@@ -25,20 +25,24 @@ const Modal = (props) => {
             "lng": e.target.Longitude.value,
             "address": e.target.Address.value,
             "notes": e.target.Notes.value,
-            "tag": [e.target.tag.value],
+            "tags": [e.target.tag.value],
             "colour": e.target.colour.value,
             "user_id": 1
         };
-        // const options = {
-        //     method: 'POST',
-        //     body: JSON.stringify(postData),
-        //     headers: { "Content-Type": "application/json" }
-        // };
+        const options = {
+            method: 'POST',
+            body: JSON.stringify(postData),
+            headers: {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "http://localhost:8000",
+                "Access-Control-Allow-Headers": "Content-Type, Authorization"
+            }
+        };
 
-        // fetch('/api/*', options)
-        //     .then(r => r.json())
-        //     .then(() => e.target.reset())
-        //     .catch(console.warn)
+        fetch('http://13.59.11.193:8000/api/pins/', options)
+            .then(r => r.json())
+            .then(() => e.target.reset())
+            .catch(console.warn)
 
         dispatch(addPin(postData))
 
@@ -93,7 +97,7 @@ const Modal = (props) => {
 
                                 <div className="space-y-2">
                                     <label htmlFor="Address" className="text-sm font-medium  tracking-wide">Address: </label>
-                                    <input className=" shadow-sm border rounded-md w-full py-2 px-3  mt-1 leading-tight  outline-none focus:outline-none focus-within:border-purple-400 transition-all duration-500 text-base rounded-lg" placeholder="Address" name="Address" type="text"></input>
+                                    <input className=" shadow-sm border rounded-md w-full py-2 px-3  mt-1 leading-tight  outline-none focus:outline-none focus-within:border-purple-400 transition-all duration-500 text-base rounded-lg" placeholder="Address" name="Address" type="text" defaultValue={props.address}></input>
                                 </div>
 
                                 <div className="space-y-2">

@@ -259,7 +259,7 @@ const Map = () => {
 
                 </div>
             </div>
-            <Modal updateOpen={handleModalClose} name={form.name} lat={form.lat} lng={form.lng} />
+            <Modal updateOpen={handleModalClose} name={form.name} lat={form.lat} lng={form.lng} address={form.address} />
 
         </>
     )
@@ -299,6 +299,7 @@ function Search({ panTo }) {
         try {
             const results = await getGeocode({ address });
             const { lat, lng } = await getLatLng(results[0]);
+            form.address = results[0].formatted_address
             form.lat = lat
             form.lng = lng
             dispatch(setForm(form))

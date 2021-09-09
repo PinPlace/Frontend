@@ -3,7 +3,8 @@ const initState = {
   form: {
     "name": "",
     "lat": 0,
-    "lng": 0
+    "lng": 0,
+    "address": ""
   },
   recent: {
     lat: 52.075004,
