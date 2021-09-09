@@ -12,9 +12,6 @@ const Header = () => {
     }
 
 
-
-
-
     return (
         <header className="animHeader" >
             <NavLink exact to="/" activeClassName="current">
