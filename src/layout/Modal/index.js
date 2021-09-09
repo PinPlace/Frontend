@@ -34,12 +34,10 @@ const Modal = (props) => {
             body: JSON.stringify(postData),
             headers: {
                 "Content-Type": "application/json",
-                "Access-Control-Allow-Origin": "http://localhost:8000",
-                "Access-Control-Allow-Headers": "Content-Type, Authorization"
             }
         };
 
-        fetch('http://13.59.11.193:8000/api/pins/', options)
+        fetch('api/*', options)
             .then(r => r.json())
             .then(() => e.target.reset())
             .catch(console.warn)
