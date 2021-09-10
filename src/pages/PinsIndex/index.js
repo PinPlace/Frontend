@@ -16,26 +16,29 @@ const PinsIndex = () => {
     ));
 
   return (
-    <div className='relative'>
-      <div className='absolute gradscheme inset-0 z-0'></div>
-      <div className='min-h-screen sm:flex sm:flex-row mx-0 justify-center'>
-        <div className='flex-col flex  self-center p-10 sm:max-w-5xl xl:max-w-2xl  z-10'>
-          <div className='hidden lg:flex flex-col  text-white'></div>
-        </div>
-        <div className='flex justify-center self-center z-10'>
-          <div className='p-12 bg-white mx-auto rounded-3xl w-full '>
-            <div className='mb-4'>
-              <h3 className='text-center font-semibold text-2xl text-gray-800'>Pins</h3>
+    <div className="min-w-screen min-h-screen gradscheme flex items-center p-20 ">
+      <div id="mapBox" className="flex-1 rounded-3xl bg-white shadow-xl lg:p-20 flex items-center text-center ">
 
-              {renderLocation()}
-              <div className='text-center'>
-                <AddButton />
-              </div>
-            </div>
+
+
+
+        <div class=" mx-auto">
+          <h3 className="text-4xl font-semibold leading-normal text-center">
+            Pins
+          </h3>
+          <div className="grid grid-cols-3 lg:grid-cols-4 gap-5 w-full h-full">
+            {renderLocation()}
           </div>
         </div>
+
+
+
+
+
+
       </div>
     </div>
+
   );
 };
 

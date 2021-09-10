@@ -25,16 +25,13 @@ const Map = () => {
     const form = useSelector(state => state.form.form)
     const recent = useSelector(state => state.form.recent)
     const [markers, setMarkers] = React.useState(pins);
+
     useEffect(() => {
         setMarkers(pins)
     }, [pins]);
 
-
-
-
     let fetchState = () => {
         const pins = useSelector(state => state.pins.pins)
-        console.log(pins)
     }
 
     const mapRef = React.useRef() //To retain state withou re renders for search 
