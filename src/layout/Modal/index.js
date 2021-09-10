@@ -20,6 +20,7 @@ const Modal = (props) => {
     const handleSubmit = React.useCallback((e) => {
         e.preventDefault();
         const postData = {
+            "pin_id": 12,
             "name": e.target.name.value,
             "lat": e.target.Latitude.value,
             "lng": e.target.Longitude.value,
