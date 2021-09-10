@@ -32,7 +32,7 @@ function App() {
         {/* <Route path="/share" ><Share /></Route> */}
         <Route path="/profile" ><Profile /></Route>
         <Route path="/404" ><Error404 /></Route>
-        <Route component={Error404} />
+        <Route path="/*" component={Error404} />
       </Switch>
       {/* <Modal isItOpen={ModalClose} updateOpen={handleModalClose} /> */}
 
