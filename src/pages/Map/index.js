@@ -109,6 +109,9 @@ const Map = () => {
 
                     <div className="w-full">
                         <div className=" mb-5 font-light flex flex-wrap justify-around items-center">
+                            <h3 className="text-4xl font-semibold leading-normal text-center">
+                                Map <span className="hidden md:inline-block"> it Out! </span>
+                            </h3>
                             <NavLink to="/map/addpin" activeClassName="current">
 
                                 <button
@@ -127,9 +130,7 @@ const Map = () => {
                             </NavLink>
 
 
-                            <h3 className="text-4xl font-semibold leading-normal text-center">
-                                Map <span className="hidden md:inline-block"> it Out! </span>
-                            </h3>
+
 
                             <NavLink to="/map/filter" activeClassName="current">
 

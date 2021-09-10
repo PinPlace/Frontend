@@ -3,6 +3,9 @@ import "./style.css";
 import { NavLink } from "react-router-dom";
 import { ListCard, AddButton } from "../../components";
 import { useSelector, connect } from "react-redux";
+import Icon from '@mdi/react'
+import { mdiClipboardListOutline } from '@mdi/js'
+
 
 const ListIndex = () => {
   const [list, setlist] = useState([]);
@@ -13,26 +16,45 @@ const ListIndex = () => {
   const renderLists = () =>
     listIndex.result.map((x) => <ListCard key={x.id} id={x.id} name={x.name} iconClass={x.thumb} border={x.colour} />);
   return (
-    <div className='relative'>
-      <div className='absolute gradscheme inset-0 z-0'></div>
-      <div className='min-h-screen sm:flex sm:flex-row mx-0 justify-center'>
-        <div className='flex-col flex  self-center p-10 sm:max-w-5xl xl:max-w-2xl  z-10'>
-          <div className='hidden lg:flex flex-col  text-white'></div>
-        </div>
-        <div className='flex justify-center self-center z-10'>
-          <div className='p-12 bg-white mx-auto rounded-3xl w-full '>
-            <div className='mb-4'>
-              <h3 className='text-center font-semibold text-2xl text-gray-800'>Lists</h3>
-              <p className='text-center text-gray-500 mt-3'>Please sign in to use PinPlace</p>
-              {renderLists()}
-              <div className='text-center'>
-                <AddButton />
-              </div>
-            </div>
+    <div className="min-w-screen min-h-screen gradscheme flex items-center p-20 ">
+      <div id="mapBox" className="flex-1 rounded-3xl bg-white shadow-xl lg:p-20 flex items-center text-center overflow-scroll ">
+
+
+
+
+        <div class=" mx-auto w-full">
+          <div className="flex flex-row justify-between"><h3 className="text-4xl font-semibold leading-normal text-center">
+            Lists
+          </h3>
+
+            <button
+              className="gradscheme transform transition-all hover:scale-110 active:bg-lightBlue-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded-md outline-none focus:outline-none sm:mr-2 mb-1 md:pt-3 md:pr-5 ease-linear transition-all duration-150"
+              type="button"
+
+            >
+              <Icon path={mdiClipboardListOutline}
+                title="Add List"
+                size={1}
+                className="inline md:mb-1 md:mr-1"
+              /> <span className="hidden md:inline-block"> Add List </span>
+            </button>
+
+
+          </div>
+          <div className="grid grid-cols-3 lg:grid-cols-1 gap-5 mx-24 w-auto h-full">
+            {renderLists()}
           </div>
         </div>
+
+
+
+
+
+
       </div>
     </div>
+
+
   );
 };
 
