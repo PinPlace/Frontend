@@ -11,6 +11,7 @@ const Pins = (props) => {
   let pinLocation = pinInfo.address;
   let pinTags = pinInfo.tags;
   let backcol = pinInfo.colour;
+  let notes = pinInfo.notes;
 
   return (
 
@@ -28,6 +29,9 @@ const Pins = (props) => {
               <br />
               <h1 className="text-xl font-semibold leading-normal">Address:</h1>
               <p>{pinLocation}</p>
+              <br />
+              <h1 className="text-xl font-semibold leading-normal">Notes:</h1>
+              <p>{notes}</p>
               <br />
               <h1 className="text-xl font-semibold leading-normal">Tags:</h1>
               <button className="mx-auto w-auto px-3 py-1 rounded-full text-white" style={{ background: backcol }}>{pinTags}</button>
