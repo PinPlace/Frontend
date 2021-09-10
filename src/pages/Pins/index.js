@@ -7,12 +7,13 @@ const Pins = (props) => {
   let name = props.match.params.id;
   const pin1 = useSelector((state) => state.pins.pins);
   let pinInfo = pin1[name - 1];
-
   let pinTitle = pinInfo.name;
-  let pinLocation = pinInfo.location;
+  let pinLocation = pinInfo.address;
   let pinTags = pinInfo.tags;
+  let backcol = pinInfo.colour;
 
   return (
+
     <div class='relative'>
       <div class='absolute gradscheme inset-0 z-0'></div>
       <div class='min-h-screen sm:flex sm:flex-row mx-0 justify-center'>
@@ -22,16 +23,14 @@ const Pins = (props) => {
         <div class='flex justify-center self-center z-10'>
           <div class='p-12 bg-white mx-auto rounded-3xl w-full '>
             <div class='mb-4'>
-              <h1>Name:</h1>
+              <h1 className="text-xl font-semibold leading-normal">Name:</h1>
               <p>{pinTitle}</p>
               <br />
-              <h1>Location:</h1>
+              <h1 className="text-xl font-semibold leading-normal">Address:</h1>
               <p>{pinLocation}</p>
               <br />
-              <h1>Tags:</h1>
-              <p>{pinTags}</p>
-              <br />
-              <h2>View On Map</h2>
+              <h1 className="text-xl font-semibold leading-normal">Tags:</h1>
+              <button className="mx-auto w-auto px-3 py-1 rounded-full text-white" style={{ background: backcol }}>{pinTags}</button>
             </div>
           </div>
         </div>
