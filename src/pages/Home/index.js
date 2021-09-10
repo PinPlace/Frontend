@@ -84,7 +84,8 @@ const Home = () => {
                                             </div>
                                         </div>
                                         <div>
-                                            <input className=" text-white gradscheme transform transition-all hover:scale-110 cursor-pointer  rounded-full focus:bg-purple-700 w-full px-28 font-bold text-lg mx-auto p-2 " name="submit" type="submit" value="Sign in" />
+                                            <NavLink to="/pins" activeClassName="current">
+                                                <input className=" text-white gradscheme transform transition-all hover:scale-110 cursor-pointer  rounded-full focus:bg-purple-700 w-full px-28 font-bold text-lg mx-auto p-2 " name="submit" type="submit" value="Sign in" /></NavLink>
                                         </div>
                                     </div>
                                 </form>
@@ -122,6 +123,7 @@ const Home = () => {
                                             <input className=" shadow-sm border rounded-md w-full py-2 px-3  mt-1 leading-tight  outline-none focus:outline-none focus-within:border-purple-400 transition-all duration-500 text-base rounded-lg" name="password2" type="password" placeholder="Confirm password"></input>
                                         </div>
                                         <div>
+
                                             <input className=" text-white transform transition-all hover:scale-110 cursor-pointer gradscheme rounded-full focus:bg-purple-700 w-full px-28 font-bold text-lg mx-auto p-2 " name="submit" type="submit" value="Register" />
                                         </div>
                                     </div>
